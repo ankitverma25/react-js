@@ -61,11 +61,18 @@ function App() {
         onClick={copytoclip}>
           copy
         </button>
+        <button 
+          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition duration-200"
+        onClick={passwordgenerator}>
+          refresh
+        </button>
+        
       </div>
       <input type="range" id="length" min={4} max={100} value={length} onChange={handleLengthChange}/>length({length})<br/>
       <input type="checkbox" id="number" onClick={()=>{setAddnumber(!addnumber)}}/> number
       <input type="checkbox" id="character" onClick={()=>setAddchar(!addchar)}/>character
     </div>
+
   </>
 
 
