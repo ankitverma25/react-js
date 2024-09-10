@@ -5,6 +5,7 @@ function InputBox({
   onCurrencychange,
   currencyOptions = [],
   selectcurrency,
+  amountdisable,
 }) {
   return (
     <div className={`bg-white p-3 rounded-lg text-sm flex `}>
@@ -20,6 +21,7 @@ function InputBox({
             const value = Number(e.target.value);
             onAmountchange && onAmountchange(isNaN(value) ? 0 : value); // Handle NaN gracefully
           }}
+          disabled={amountdisable}
         />
       </div>
       <div className="w-1/2 flex flex-wrap justify-end text-right">

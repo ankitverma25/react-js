@@ -9,8 +9,8 @@ import useCurrencyinfo from './hooks/usecurrencyinfo';
 function App() {
     const [amount, setAmount] = useState();
     const [amountchange, setAmountchange] = useState()
-    const [from, setFrom] = useState('usd')
-    const [to, setTo] = useState('inr')
+    const [from, setFrom] = useState('USD')
+    const [to,setTo] = useState('INR')
 
 
     const currency_details = useCurrencyinfo(from)
@@ -23,8 +23,8 @@ function App() {
     }
 
     function swapCurrencies() {
-        setFrom(to);
-        setTo(from);
+        setTo(from)
+        setFrom(to)
     }
     return (
         <div
@@ -46,6 +46,7 @@ function App() {
                                 onCurrencychange={(e) => setFrom(e)}
                                 currencyOptions={options}
                                 selectcurrency={from}
+                                amountdisable={false}
                             />
                         </div>
                         <div className="relative w-full h-0.5">
@@ -66,6 +67,7 @@ function App() {
                                 onCurrencychange={(e) => setTo(e)}
                                 currencyOptions={options}
                                 selectcurrency={to}
+                                amountdisable
                             />
                         </div>
                         <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg">
