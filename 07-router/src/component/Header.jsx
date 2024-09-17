@@ -1,14 +1,8 @@
 import React from 'react'
 
-
 function Header() {
   return (
-    <>
-    <h6 className='text-8xl text-red-500'>helooo</h6>
-
-
-
-    </>
+    <>Header <h1>hello i am header</h1></>
   )
 }
 

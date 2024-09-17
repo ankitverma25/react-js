@@ -1,18 +1,18 @@
 
-import Header from '../component/Header'
+import Header from './component/Header'
 import { Outlet } from 'react-router-dom'
+import Footer from './component/Footer'
 
 
 
 function App() {
 
   return (
-    <>
-    <div className='bg-gray-100 text-8xl'>hello</div>
-     <Header/>
-     <Outlet/>
 
-
+<>
+          <Header/>
+          <Outlet/>
+          <Footer/>
     </>
   )
 }
