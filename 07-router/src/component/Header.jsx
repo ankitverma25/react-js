@@ -13,9 +13,19 @@ function Header() {
 
 
         <ul className='flex flex-row gap-3'>
-          <li><NavLink to={'/'}>Home</NavLink></li>
-          <li><NavLink to={'/about'}>About</NavLink></li>
-          <li><NavLink to={'/contact'}>Contact</NavLink></li>
+          <li><NavLink className={({ isActive }) => `
+          ${isActive ? "text-red-400" : "text-white"}`
+          } to={'/'}>Home</NavLink></li>
+          <li><NavLink className={({ isActive }) => `
+          ${isActive ? "text-red-400" : "text-white"}`
+          }
+            to={'/about'}>About</NavLink></li>
+          <li><NavLink to={'/contact'} className={({ isActive }) => `
+          ${isActive ? "text-red-400" : "text-white"}`
+          }>Contact</NavLink></li>
+          <li><NavLink to={'/github'} className={({ isActive }) => `
+          ${isActive ? "text-red-400" : "text-white"}`
+          }>github</NavLink></li>
 
         </ul>
 
@@ -23,7 +33,7 @@ function Header() {
 
 
 
-        
+
         <h1>hello i am header</h1>
 
 
