@@ -1,21 +1,13 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Card from "./components/card";
+
+import Navbar from './components/Navbar';
 
 function App() {
 
   return (
     <>
+    <Navbar/>
 
-    <Card username="ankit" btw="rohan"/>
-    <Card username="ankit" btw="rohan"/>
-    <Card username="ankit" btw="rohan"/>
-    <Card username="ankit" btw="rohan"/>
     
-
-    <h1 className='bg-green-400   '>tailwind test</h1>
       </>
   )
 }
