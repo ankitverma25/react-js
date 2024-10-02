@@ -3,7 +3,9 @@ import { createContext } from "react";
 
 
 export const Todocontext=createContext({
-    todos:[],
+    todos:[{  id:1,
+        title:"Buy Milk",
+        completed:false},{}],
     addTodo:()=>{},
     deleteTodo:()=>{},
     editTodo:()=> {},
@@ -12,6 +14,6 @@ export const Todocontext=createContext({
 
 export const Todoprovider=Todocontext.Provider;
 
-export default function usetodo(){
+export default function useTodo(){
     return useContext(Todocontext)
 }

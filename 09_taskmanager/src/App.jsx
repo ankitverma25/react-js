@@ -1,18 +1,16 @@
 import { useState } from "react"
-import { Todoprovider } from "./component/Todo"
+import { Todoprovider } from "./context/Todo"
+import Inputtask from "./component/Inputtask";
+import TodoList from "./component/TodoList";
 
 
 
 function App() {
 
-  const [todos,setTodos]=useState([{
-    id:1,
-    title:"Buy Milk",
-    completed:false
-  }])
+  const [todos,setTodos]=useState([])
 
   const addTodo=(todo)=>{
-    setTodos([...todos,{todo}]);
+    setTodos([...todos,todo]);
   };
 
   const deleteTodo=(id)=>{
@@ -30,12 +28,11 @@ function App() {
 
   return (
     <Todoprovider value={{todos,addTodo,deleteTodo,editTodo,toggleTodo}}>
-      <div className=" bg-orange-500 p-5 rounded-xl flex justify-center">
-        <h1 className="text-3xl font-bold underline">TO-DO</h1>
-
-
-        
+      <div className=" bg-orange-500 p-5 flex justify-center">
+        <h1 className="text-3xl font-bold underline">TO-DO</h1>  
       </div>
+        <Inputtask/>
+        <TodoList/>
 
      
     </Todoprovider>
