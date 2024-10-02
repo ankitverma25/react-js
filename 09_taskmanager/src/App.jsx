@@ -30,6 +30,12 @@ function App() {
 
   return (
     <Todoprovider value={{todos,addTodo,deleteTodo,editTodo,toggleTodo}}>
+      <div className=" bg-orange-500 p-5 rounded-xl flex justify-center">
+        <h1 className="text-3xl font-bold underline">TO-DO</h1>
+
+
+        
+      </div>
 
      
     </Todoprovider>
