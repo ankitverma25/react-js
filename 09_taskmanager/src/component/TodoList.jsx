@@ -9,7 +9,7 @@ function TodoList() {
       <ul>
         {todos.map((todo) => (
           <li key={todo.id}>
-            {todo.title}
+            <input type="text" value={todo.title} className={`${todo.completed?'line-through bg-slate-300':'bg-slate-300'} outline-none`} disabled={false} />
             <button onClick={() => deleteTodo(todo.id)}>Delete</button>
             <button onClick={() => toggleTodo(todo.id)}>
               {todo.completed ? "Mark Incomplete" : "Mark Complete"}
