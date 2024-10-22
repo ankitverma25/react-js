@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Themeprovider } from "./context/context"
-import Themebtn from "./component/themebtn"
+import Themebtn from "./component/Themebtn"
 
 function App() {
   const [theme,setTheme]=useState('light')
