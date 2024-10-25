@@ -1,14 +1,14 @@
 import { useContext } from "react";
 import { createContext} from "react";
 
-export const context=createContext({
+export const Context=createContext({
     theme:"light",
     dark:()=>{},
     light:()=>{},
 })
-export const Contextprovider1=context.Provider();
+export const Contextprovider1=Context.Provider;
 
 
 export default function useThis(){
-    return useContext(context);
+    return useContext(Context);
 }
