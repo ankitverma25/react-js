@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import { Contextprovider1 } from "./context/context"
-import Themebtn from "./component/themebtn";
+import Themebtn from "./component/Themebtn"
+import Login from "./component/Login"
 
 
 function App() {
@@ -18,18 +19,18 @@ function App() {
       const themechange=document.querySelector('html');
       themechange.classList.remove('dark','light');
       themechange.classList.add(theme)
-
-  }, [theme])
+      console.log(1)
+  },[theme])
   
 
   return (
     <Contextprovider1 value={{theme,dark,light}}>
       
-      <div className="w-screen h-screen bg-slate-900" > ankit</div>
+      <div className="h-screen w-screen dark:bg-slate-600 bg-slate-200">
       <Themebtn/>
+      <Login/>
+      </div>
 
-      
-      
 
     </Contextprovider1>
   )
